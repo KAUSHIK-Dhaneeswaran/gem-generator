@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gem Generator</title>
+<style>
+  body {
+    background: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+  }
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    grid-gap: 5px;
+    justify-content: center;
+  }
+  .gem {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 0 5px #000;
+  }
+  .gem:hover {
+    transform: scale(1.1);
+  }
+  .red { background-color: red; }
+  .green { background-color: green; }
+  .blue { background-color: blue; }
+  .yellow { background-color: yellow; }
+  .purple { background-color: purple; }
+  .gray { background-color: gray; }
+</style>
+</head>
+<body>
+
+<h1>Fan-Made Gem Generator</h1>
+<div id="grid"></div>
+
+<script>
+  const colors = ["red", "green", "blue", "yellow", "purple", "gray"];
+  const rows = 5;
+  const cols = 6;
+  let selected = null;
+
+  const grid = document.getElementById('grid');
+
+  function createGem(color) {
+    const gem = document.createElement('div');
+    gem.classList.add('gem', color);
+    gem.addEventListener
+    
